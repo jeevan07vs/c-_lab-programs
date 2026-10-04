@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+class Box{
+    int w,h,d;
+    public:
+    Box() : Box(0, 0, 0) {}
+    Box(int w, int h, int d) : w(w), h(h), d(d) {}
+    Box(int s): Box(s, s, s) {}
+    int volume() const {return w*h*d;}
+};
+int main()
+{
+    Box a; 
+    Box b(3);
+    Box c(2,3,4);
+    cout<<"Volume of box a: "<<a.volume()<<endl;
+    cout<<"Volume of box b: "<<b.volume()<<endl;
+    cout<<"Volume of box c: "<<c.volume()<<endl;
+    return 0;
+}
